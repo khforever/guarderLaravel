@@ -19,9 +19,9 @@ Route::get('/', function () {
 });
 
 
-// Task 
+// Task 8
 
-Route::get('testHome',[GuardController::class,'testHome'])->name('testHome');
+//Route::get('testHome',[GuardController::class,'testHome'])->name('testHome');
 
 
 Route::get('about',[GuardController::class,'about'])->name('about');
@@ -37,3 +37,19 @@ Route::get('guard',[GuardController::class,'guard'])->name('guard');
 
 
 
+
+
+//Task 11
+
+
+
+
+
+
+Route::get('testHome',[GuardController::class,'testHome'])->middleware('verified')->name('testHome');
+
+
+
+Auth::routes(['verify'=>true]);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
