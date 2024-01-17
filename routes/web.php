@@ -22,7 +22,14 @@ Route::get('/', function () {
 // Task 8
 
 //Route::get('testHome',[GuardController::class,'testHome'])->name('testHome');
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+    ], function(){
 
+
+        
 
 Route::get('about',[GuardController::class,'about'])->name('about');
 
@@ -37,7 +44,7 @@ Route::get('guard',[GuardController::class,'guard'])->name('guard');
 
 
 
-
+});
 
 //Task 11
 
@@ -47,6 +54,10 @@ Route::get('guard',[GuardController::class,'guard'])->name('guard');
 
 
 Route::get('testHome',[GuardController::class,'testHome'])->middleware('verified')->name('testHome');
+
+
+
+
 
 
 

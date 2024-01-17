@@ -1,3 +1,9 @@
+
+
+<html lang="{{LaravelLocalization::getCurrentLocale()}}" dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}">
+
+
+
 <div class="hero_area">
     <!-- header section strats -->
     <div class="hero_bg_box">
@@ -60,6 +66,11 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{{route('contact')}}">Contact us</a>
                 </li>
+
+                <li class="nav-item"><a class="nav-link" href="{{ LaravelLocalization::getLocalizedURL('en') }}">English</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="{{ LaravelLocalization::getLocalizedURL('ar') }}">عربي</a></li>
+
               </ul>
             </div>
           </nav>
