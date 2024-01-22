@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\GuardController;
+//use App\Http\Controllers\GuardController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GuardController;
 
 /*
 |--------------------------------------------------------------------------
